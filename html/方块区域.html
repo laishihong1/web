@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+        }
+        table {
+            width: 400px;
+            height: 300px;
+            border: 4px outset blue;
+            margin: 0 auto;
+        }
+        tr,td {
+            border: 2px solid rgb(0,0,0);
+            text-align: center;
+        }
+        .tr_td_2 {
+            width: 30px;
+            height: 258px;
+        }
+        .box1 {
+            width: 170px;
+            height: 170px;
+            border: 3px outset blue;
+            margin: 0 auto;
+        }
+        .box1 td {
+            border: 2px solid rgb(0,0,0);
+            text-align: center;
+        }
+        .he_zi {
+            width: 190px;
+            height: 110px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+       <tr>
+           <td>1</td>
+           <td rowspan="2" class="tr_td_2">2</td>
+           <td class="he_zi">
+               <table class="box1">
+                   <tr>
+                       <td>a</td>
+                       <td rowspan="2">b</td>
+                       <td>c</td>
+                   </tr>
+                   <tr>
+                    <td>d</td>
+                    <td>f</td>
+                   </tr>
+                   <tr>
+                    <td>g</td>
+                    <td>h</td>
+                    <td>i</td>
+                   </tr>
+               </table>
+           </td>
+       </tr>
+       <tr>
+        <td class="he_zi">
+            <table class="box1">
+                <tr>
+                    <td>a</td>
+                    <td rowspan="2">b</td>
+                    <td>c</td>
+                </tr>
+                <tr>
+                 <td>d</td>
+                 <td>f</td>
+                </tr>
+                <tr>
+                 <td>g</td>
+                 <td>h</td>
+                 <td>i</td>
+                </tr>
+            </table>
+        </td>
+        <td>6</td>
+       </tr>
+       <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+       </tr>
+    </table>
+</body>
+</html>

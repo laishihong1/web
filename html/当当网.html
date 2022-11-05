@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ch-ZN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/当当网头部制作.css">
+    <link rel="stylesheet" href="../css/当当网底部制作.css">
+    <link rel="stylesheet" href="../css/当当网内容制作.css">
+</head>
+<body class="bei_jing">
+    <!-- 头部制作 -->
+   <div class="w header">
+       <h1 class="guide_picture"></h1>
+
+       <ul class="list_guide">
+
+           <li>
+               <a href="#">购物车</a>
+           </li>
+
+           <li>|</li>
+
+           <li>
+               <a href="#">我的订单</a>
+           </li>
+
+           <li>|</li>
+
+           <li>
+               <a href="#">我的当当</a>
+           </li>
+
+           <li>|</li>
+
+           <li>
+               <a href="#">礼品卡</a>
+           </li>
+
+           <li>|</li>
+
+           <li>
+               <a href="#">手机当当</a>
+           </li>
+
+           <li>|</li>
+
+           <li>
+               <a href="#">企业销售</a>
+           </li>
+
+           <li>|</li>
+
+           <li>
+               <a href="#">帮助</a>
+           </li>
+       </ul>
+       <p>欢迎登陆当当网，请<a href="#">登录</a>&nbsp;<a href="#">免费注册</a></p>
+   </div>
+<!-- 内容制作 -->
+<section class="content w">
+  <div class="content_header">
+    <ul class="zhu_ce_geng_huan_botton_left">
+        <li> 新用户注册</li>
+        <li> 企业用户注册</li>
+    </ul>
+
+    <ul class="zhu_ce_geng_huan_botton_right">
+        <li>欢迎登陆当当网</li>
+        <li><a href="#">请登陆</a></li>
+    </ul>
+  </div>
+<form action="#">
+    <nav class="Nav">
+        <a href="#">查看购买规则</a>
+        <ul>
+             <i></i>
+             <li>账户信息</li>
+    
+             <li>
+                 <label for="yong_hu">用户名
+                     <input type="text" name="user_name" id="yong_hu">
+                 </label>
+             </li>
+             <li>
+                 <label for="set_mi_ma">设置密码
+                     <input type="password" name="set_password" id="set_mi_ma">
+                 </label>
+             </li>
+             <li>
+                 <label for="enter_mi_ma">确认密码
+                     <input type="password" name="enter_password" id="enter_mi_ma">
+                 </label>
+             </li>
+        </ul>
+    </nav>
+    <nav class="qi_ye_xin_xi">
+        <ul> 
+            <i></i>
+            <li>企业及联系人信息</li>
+            <li>
+                <label for="compary_ming_chen">公司名称
+                   <input type="text" name="compary_name" id="compary_ming_chen" placeholder="请填写单位执照上的名称">
+                </label>
+            </li>
+            <li>公司地址
+                <select name="contary" id="guo_jia" style="margin-left: 10px;">
+                    <option value="" disabled selected hidden>请选择</option>
+                    <option value="china">中国</option>
+                    <option value="NSA">美国</option>
+                    <option value="JP">日本</option>
+                </select>
+                <select name="province" id="shen_fen">
+                    <option value="" disabled selected hidden>请选择</option>
+                    <option value="sc">四川</option>
+                    <option value="bj">北京</option>
+                    <option value="sh">上海</option>
+                </select>
+                <select name="city" id="cheng_shi">
+                    <option value="" disabled selected hidden>请选择</option>
+                    <option value="cd">成都</option>
+                    <option value="dy">德阳</option>
+                    <option value="my">绵阳</option>
+                </select>
+                <input type="text" style="display: block; position: relative; left: 49px; margin-top: 40px;" placeholder="请填写街道地址" >
+            </li>
+            <li>
+                <label for="compary_you_xiang">公司邮箱
+                    <input type="email" name="compary_email" id="compary_you_xiang" placeholder="建议写企业邮箱">
+                </label>
+            </li>
+            <li>固定电话
+                <input type="text" style=" width:68px; height:26px; margin-right: 18px;">
+                <input type="text" style="width:89px; height:26px; margin-right:17px;">
+                <input type="text" style="width:90px; height:26px;">
+            </li>
+            <li style="position: relative; left: 386px;">
+                <label for="lian_xi">联系人姓名
+                    <input type="text" name="linkman_name" id="lian_xi">
+                </label>
+            </li>
+            <li style="position: relative; left: 409px;">
+            <label for="shou_ji_hao">手机号</label>
+                   <input type="text" name="phone_number" id="shou_ji_hao">
+          </li>
+            <li style="position: relative; left: 409px;">
+                <label for="yan_zhen">验证码</label>
+                <input type="text" name="Verification_code" id="yan_zhen" style="width:172px; height:26px; margin-right: 32px;" placeholder="请输入验证码">
+                <div style="display: inline-block;position: relative; width: 115px; height: 39px; background-color: aqua;left: -15px; top: 19px;">
+                <img src="../zao_pian/验证码.png" alt="验证码" style="width: 115px; height: 39px;">
+                </div>
+                <a href="#" style=" display:inline-block; width: 20px; height: 24px; margin-left: 3px;  position: relative; right: 10px; top: 19px; background: url(../zao_pian/icon_qy.png) 0px 104px;"></a>
+            </li>
+          </ul>
+    
+          <input type="checkbox" name="enter" checked="checked" style="position: relative; left: 435px; top:254px"> 
+          <per style="display: inline-block; position: relative; left: 442px; top: 253px; font-size: 10px;">我已阅读并同意&nbsp;<a href="#" style="color: #1a66b3; text-decoration: none;">《当当交易条款》</a>&nbsp;和&nbsp;<a href="#" style="color: #1a66b3; text-decoration: none;">《当当社区条款》</a></per>
+          <input type="submit" name="succeed" value="立即注册" style="display: block; position: relative;background-color: #ff2832; color: #ffffff; left: 504px; top: 290px; width: 179px; height: 44px; line-height: 44px; border: transparent; border-radius: 25px;">
+    </nav>
+</form>
+   
+
+</section>
+<!-- 底部制作 -->
+<footer class="foot">
+<ul class="qi_ye_guide">
+    <li><a href="#">公司简介</a></li>
+    <li>|</li>
+    <li><a href="#">诚聘英才</a></li>
+    <li>|</li>
+    <li><a href="#">手机当当</a></li>
+    <li>|</li>
+    <li><a href="#">网站联盟</a></li>
+    <li>|</li>
+    <li><a href="#">当当招商</a></li>
+    <li>|</li>
+    <li><a href="#">机构销售</a></li>
+    <li>|</li>
+    <li><a href="#">官方Blog</a></li>
+    <li></li>
+</ul>
+<p class="zhu_ce">Copyright&copy;当当网&copy;2004-2007，All&nbsp;Rights&nbsp;Reserved</p>
+
+<p class="shi_pin">京ICP证041189 号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出版物经营许可证 新出发京批字第直0673号&nbsp;|&nbsp;
+    食品流通许可证：SP1101011010021855(1-1)
+</p>
+<p class="yao_pin">互联网药品信息服务资格证编号：(京)-非经营性-2012-0016&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京公安
+    备1101010000001号
+    <ul class="foot_er_picture w">
+        <li><img src="../zao_pian/经营许可证.png" alt="经营网站许可证"></li>
+        <li><img src="../zao_pian/可行网站.png" alt="可信网站"></li>
+        <li><img src="../zao_pian/安全日.png" alt="首都网络安全日"></li>
+        <li><img src="../zao_pian/品牌官网.png" alt="品牌官网"></li>
+    </ul>
+</p>
+
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding:0;
+            margin: 0;
+        }
+
+       div {
+           position: relative;
+           height: 30px;
+           width: 640px;
+           margin: 100px auto;
+       }
+       
+        input {
+            width: 610px;
+            height: 30px;
+            outline: none;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            font-size:24px;
+        }
+
+       #eye {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            right: 35px;
+        }
+
+        .box,.box1{
+            position: absolute;
+            margin: 0;
+            width: 160px;
+            height: 30px;
+            right: -134px;;
+            top: 0; 
+        }
+     
+
+        .right {
+            position: absolute;
+            margin: 0;
+            width: 22px;
+            height: 26px;
+            display: none;
+            background: url("../zao_pian/true.png");
+        }
+
+        .wrong {
+            position: absolute;
+            margin: 0;
+            width: 22px;
+            height: 26px;
+            background: url("../zao_pian/false.png") no-repeat;
+            display: none;
+        }
+
+.span {
+    position: absolute;
+    color: red;
+    left: 26px;
+    display: none;
+}
+        .div {
+           display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="">
+            <input type="text" id="text" placeholder="请输入用户名">
+        </label>
+          <div class="box " id="box">
+              <span class="right"></span>
+              <span class="wrong"></span>
+              <span class="span">请输入用户名</span>
+          </div>
+      
+    </div>
+
+       <div>
+        <label for="">
+            <input type="password" id="pwd" placeholder="请输入密码">
+        </label>
+         <img src="../zao_pian/close.eye.png" alt="" id="eye">
+         <div id="box1 " class="box1">
+            <span class="right"></span>
+            <span class="wrong"></span>
+            <span class="span">请输入密码</span>
+        </div>
+       </div>
+      
+   <script>
+      
+       var eye=document.getElementById('eye');    //眼睛
+       var text=document.getElementById('text');
+       var pwd=document.getElementById('pwd');
+       var box=document.getElementById('box');
+       var box1=document.getElementById('box1');
+       var flag=0;
+
+     text.onblur=function()
+    {
+        if(text.value=='')
+        {
+            box.className=' box span wrong div';
+        }
+        else 
+        {
+            box.className='box right div';
+        }
+    }
+     
+    pwd.onblur=function()
+    {
+        if(pwd.value.length<6||pwd.value.length>12)
+        {
+            box1.className='box1 span wrong div';
+        }
+        else 
+        {
+            box1.className='box1 right div';
+        }
+    }
+
+     eye.onclick=function() //眼睛
+       {    
+             if(flag==0)
+             {
+                 pwd.type='text';
+                 eye.src='../zao_pian/open.eye.png';
+                 flag=1;
+             }
+             else {
+                 eye.src='../zao_pian/close.eye.png';
+                 pwd.type='password';
+                 flag=0;
+             }
+        }
+       
+   </script>
+</body>
+</html>

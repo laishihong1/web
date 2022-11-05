@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 24px;
+            color: red;
+            border: 1px solid red;
+            text-align: center;
+            width: 600px;
+            margin: 8% auto;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p id="djs"></p>
+    <p id="gao_kaos"></p>
+    <p id="time"></p>
+    <p id="yuan_dan"></p>
+    <script>
+        window.onload = function() 
+        {
+            setInterval(function() 
+            {
+                var nowTime = new Date();//获取当前时间
+
+                //高考
+
+                var gao_kao=new Date("2022-6-11 00:00:00");
+                var ju_li=parseInt((gao_kao.getTime()-nowTime.getTime())/1000);
+                var dd =parseInt(ju_li /3600 / 24);//相差天数
+                var hh = parseInt(ju_li / 3600 % 24);
+                var mm = parseInt(ju_li/ 60 % 60);
+                var ss = parseInt(ju_li % 60);
+                
+               //元旦
+
+                var gao_kao=new Date("2022-1-1 00:00:00");
+                var ju_li=parseInt((gao_kao.getTime()-nowTime.getTime())/1000);
+                var ddd =parseInt(ju_li /3600 / 24);//
+                var hhh = parseInt(ju_li / 3600 % 24);
+                var mmm = parseInt(ju_li/ 60 % 60);
+                var sss = parseInt(ju_li % 60);
+                
+
+
+                //创建日期对象
+                var endTime = new Date("2021-9-1 00:00:00");
+                var seconds = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);//两个时间点的时间差(秒)
+                var d = parseInt(seconds / 3600 / 24);//得到天数
+                var h = parseInt(seconds / 3600 % 24);//小时
+                var m = parseInt(seconds / 60 % 60);//分钟
+                var s = parseInt(seconds % 60);//秒
+                
+                var day=endTime.getDay()+3;
+                var year=endTime.getFullYear();
+
+                if(day===1)
+                {
+                    day='星期一';
+                }
+                else if(day===2)
+                {
+                    day='星期二';
+                }
+                else if(day===3)
+                {
+                    day='星期三';
+                }
+                else if(day===4)
+                {
+                    day='星期四';
+                }
+                else if(day===5)
+                {
+                    day='星期五';
+                }
+                else if(day===6)
+                {
+                    day='星期六';
+                }
+                else if(day===0)
+                {
+                    day='星期天';
+                }
+                document.getElementById("djs").innerHTML = "距离开学已经有" + d +"天" + h + "小时" + m + "分钟" + s + "秒";
+                document.getElementById("time").innerHTML="当前时间为"+year+"年"+ day+""+h+"点"+m+"分"+s+"秒";
+                document.getElementById("gao_kaos").innerHTML="距离高考还有" + dd +"天" + hh + "小时" + mm + "分钟" + ss + "秒";
+                document.getElementById("yuan_dan").innerHTML="距离元旦还有" + ddd +"天" + hhh + "小时" + mmm + "分钟" + sss + "秒";
+            },0.1);
+        }
+    </script>
+</body>
+</html>

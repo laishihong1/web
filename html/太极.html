@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>太极</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        div, :before, :after {
+            box-sizing: border-box;
+        }
+        #taiji {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            margin: -100px 0 0 -100px;
+            background: linear-gradient(0deg, black 50%, white 50%);
+            border-radius: 50%;
+            border:1px black solid;
+        }
+        @keyframes taiji {
+            from{
+                transform: rotate(0deg) scale(1);
+            }
+            to{
+                transform: rotate(360deg) scale(2);
+            }
+        }
+        #taiji:hover {
+            animation: taiji 1s ease 0s infinite;
+        }
+        #taiji:before, #taiji:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 25%;
+            border-radius: 50%;
+            border: 35px solid transparent;
+        }
+        #taiji:before {
+            left: 0;
+            border-color: black;
+            background-color: white;
+        }
+        #taiji:after {
+            right: 0;
+            border-color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<div id="taiji"></div>
+</body>
+</html>

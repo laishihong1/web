@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内置指令</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <!-- <form action="" method="post" >
+        <input type="text" value="cici" name="xm">
+        <input type="submit" value="提交">
+        </form> -->
+     
+        <!-- v-model 指令后面的值：data 数据/代码 -->
+
+        <input type="text" v-model="msg">
+
+         <!-- v-text 在DOM元素内部插入文本内容(单向) ，类似于 document.querySelector().innerText -->
+         
+         <p v-text="msg"></p>
+
+         <div v-text="msg2"></div>
+         
+         <!-- v-bind用于数据单向绑定 -->
+         <input type="text" name="" v-bind:value="msg">
+         
+         <input type="text" v-model="text">
+         <a :href="src">百度</a>
+         
+         <!-- v-on 事件监听：负责给DOM元素绑定事件 v-on：事件名='事件处理程序' -->
+        <p>{{msg}}</p>
+        <p v-text="msg"></p>
+        <button v-on:click="showinfo">点击</button>
+        <button @click="showinfo">点击1</button>
+
+        <!-- v-for 实现页面列表渲染：提高渲染速度 常用于循环数组、对象  高版本vue(3、4)版本: v-for索引唯一表示数据需要加 data-id="" -->
+        <div v-for="(item,index) in list">索引{{index}},元素内容是{{item}}</div>
+        <div v-for="(item,index) in mylist">属性名{{index}},属性值{{item}}</div>
+
+        <!-- v-if删除，重建元素(是否渲染) -->
+        <div v-if="isshow" style="background-color: red;">hello v-if</div>
+      
+      <!-- v-show：控制display属性 性能高于 v-if -->
+        <div v-show="isshow" style="background-color: red">hello v-show</div>
+        <button @click="isshow=!isshow">显示|隐藏</button>
+        
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                text:"测试",
+                msg:"v-model指令",
+                msg2:"<h2>你好vue</h2>",
+                src:"http://www.baidu.com",
+                
+                list:[11,22,33],
+                mylist:{
+                    name:'tom',
+                    age:29
+                },
+                isshow:true
+            },
+            methods:{
+                showinfo(){
+                   this.msg="我是v-on指令"
+                }
+            }
+        })
+    </script>
+</body>
+</html>

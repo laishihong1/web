@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊猫头</title>
+    <style>
+        div {
+            width: 200px;
+            height: 180px;
+            border: 5px solid #333;
+        }
+        div {
+
+            border-top-left-radius: 110px;
+            border-top-right-radius: 110px;
+            border-bottom-left-radius: 110px 60px;
+            border-bottom-right-radius: 110px 60px;
+        }
+        div {
+
+            background-image:
+                radial-gradient(ellipse at 50% 60%,
+                    #333 12px, transparent 12px),
+                radial-gradient(ellipse at 50% 80%,
+                    #555 6px, transparent 6px);
+        }
+        div::before,
+        div::after {
+            width: 70px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50% 50% 45% 42%;
+            display: block;
+            content: '';
+            position: absolute;
+            top: 65px;
+        }
+        div::before {
+            left: 44px;
+            transform: rotate(-45deg);
+        }
+        div::after {
+            left: 125px;
+            transform: rotate(45deg);
+        }
+        div::before {
+
+            box-shadow: 10px -68px 0 -4px #333;
+        }
+        div::after {
+
+            box-shadow: -10px -68px 0 -4px #333;
+        }
+        div::before {
+            background-image:
+                radial-gradient(circle at 51px 21px,
+                    white 3px, transparent 3px),
+                radial-gradient(circle at 46px 21px,
+                    #333 7px, transparent 7px),
+                radial-gradient(circle at 45px 21px,
+                    white 10px, transparent 10px)
+        }
+        div::after {
+
+            background-image:
+                radial-gradient(circle at 24px 15px,
+                    white 3px, transparent 3px),
+                radial-gradient(circle at 24px 20px,
+                    #333 7px, transparent 7px),
+                radial-gradient(circle at 25px 20px,
+                    white 10px, transparent 10px)
+        }
+        div {
+
+            border-bottom-width: 10px;
+            box-shadow: inset 10px -10px 0 #eee;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

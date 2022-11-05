@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        p {
+            font-weight: 700;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        body {
+            background-color: turquoise;
+        }
+        hr {
+           background-color: red;
+            border: 1px solid red;
+        }
+        ul {
+            text-align: center;
+        }
+        ul li {
+            width: 100px;
+            height: 90px;
+            display: inline-block;
+            margin-right: 20px;
+            color: blue;
+            cursor:pointer;
+        }
+        li img {
+            width: 100px;
+            height: 70px;
+            background-color: rgb(162, 192, 204);
+        }
+
+        div {
+            position: relative;
+            width: 600px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: rgb(76, 183, 197);
+            transform-style: preserve-3d;
+        }
+     div ul li {
+        position: absolute;
+        width: 600px;
+        margin-left: -300px;
+        height: 500px;
+     }
+    div ul li img {
+        width: 600px;
+        height: 500px;
+        /* display: none; */
+     }
+     ul li:hover div ul li img{
+         display: block;
+     }
+    </style>
+</head>
+<body>
+    <p>简易灯箱画廊设计</p>
+    <br>
+    <hr>
+    <br>
+    <ul>
+        <li>T1 
+          <img src="../zao_pian/图片一.png" alt="1">
+        </li>
+        <li>T2
+            <img src="../zao_pian/图片二.png" alt="2">
+        </li>
+       
+        <li>T3
+            <img src="../zao_pian/图片3.png" alt="3">
+        </li>
+       
+        <li>T4
+            <img src="../zao_pian/图片4.png" alt="4">
+        </li>
+       
+        <li>T5
+            <img src="../zao_pian/图片5.png" alt="5">
+        </li>
+       
+        <li>T6
+            <img src="../zao_pian/图片6.png" alt="6">
+        </li>
+    </ul>
+    <br>
+    <div>
+      <ul>
+          <li>
+             <img src="../zao_pian/图片一.png" alt="">
+          </li>
+          <li >
+            <img src="../zao_pian/图片二.png" alt="">
+          </li>
+          <li>
+            <img src="../zao_pian/图片3.png" alt="">
+          </li>
+          <li>
+              <img src="../zao_pian/图片4.png" alt="">
+          </li>
+          <li>
+           <img src="../zao_pian/图片5.png" alt="">
+          </li>
+          <li>
+              <img src="../zao_pian/图片6.png" alt="">
+          </li>
+      </ul>
+    </div>
+</body>
+</html>

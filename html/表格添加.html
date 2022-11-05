@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+   
+
+    <table  id="table">
+        <button v-on:click="add">添加</button>
+        <button v-on:click="del">删除</button>
+        <br/>
+      <thead>
+        <th :style="h1StyleObj">姓名</th>
+        <th :style="h1StyleObj">性别</th>
+        <th :style="h1StyleObj">年龄</th>
+        <th :style="h1StyleObj">班级</th>
+      </thead>
+      <tbody>
+       
+     <tr>
+        <td>张三</td>
+        <td>男</td>
+        <td>18</td>
+        <td>软件2班</td>
+     </tr>
+     <tr>
+        <td>张三</td>
+        <td>男</td>
+        <td>18</td>
+        <td>软件2班</td>
+     </tr>
+     <tr>
+        <td>张三</td>
+        <td>男</td>
+        <td>18</td>
+        <td>软件2班</td>
+     </tr>
+    
+    </tbody>
+    </table>
+
+
+   <script>
+    var vm=new Vue({
+        el:"#table",
+        
+        data:{
+          
+            h1StyleObj: {'text-align':'center',border:'1px solid'},
+            newitems:{
+				name:'张三',
+				sex:'男',
+                age:18,
+                class:'软件2班'
+			},
+
+            items:
+            [   
+                {name:'张三',sex:'男', age:18, class:'软件2班' },
+                {name:'张三',sex:'男', age:18, class:'软件2班'}
+            ]
+
+        
+        },
+        methods:{
+            add:function(){
+                this.items.push(this.newitems)
+				this.newitems = {name:'张三',sex:'男',age:18,class:'软件2班'}
+            },
+
+            del:function(index){
+                this.items.splice(index,1);
+            }
+        }
+            
+    })
+   </script>
+
+
+</body>
+</html>

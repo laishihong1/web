@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+        <!-- <style>
+	
+			.input {
+				width:188px;
+				background:rgb(33, 167, 125);
+				border-radius:6px;
+				box-sizing: border-box;
+				border:1px solid #ccc;
+			}
+			.input button {
+				width:60px;
+				height:35px;
+				background:#7e289d;
+				border:0;
+				color:#95892d;
+				font-size:20px;
+			}
+			.input span {
+				display:inline-block;
+				width:56px;
+				text-align:center;
+			}
+			.input button:nth-child(1) {
+				border-top-left-radius:5px;
+				border-bottom-left-radius:5px;
+			}
+			.input button:nth-child(3) {
+				border-top-right-radius:5px;
+				border-bottom-right-radius:5px;
+			}
+
+
+        </style> -->
+		 
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	 
+	<body>
+
+		<!-- <div id ="app">
+			<div class="input">
+				<!-- 语法糖 -->
+				<!-- <button @click="sub">-</button>
+				<span>{{num}}</span>
+				<button @click="add">+</button>
+			</div>
+        </div> --> 
+
+
+         <div id="app">
+			<!-- 双向数据绑定 界面 <==> data -->
+			<input type="text" @click="cityName">
+		 </div>
+
+               <div>
+				{{message | toUppercase}}
+			   </div>
+			   <div v-bind:id="dataId | formatId"></div>
+		<script>
+
+			// // 创建vue实例
+			// var app = new Vue({
+			// 	// 表示当前vue要控制的页面区域，属性值是一个字符串，一个选择器
+			// 	el:"#app",
+			//     // 表示当前vue要控制的区域的数据，属性值是一个对象
+			// 	data:{
+			// 		num:1
+			// 	},
+			// 	//该选择表示vue实例可以用到的方法
+			// 	// 值：对象，在对象中定义方法(作为页面中的时间处理函数)
+			// 	methods:{
+			// 		add:function(){
+			// 			if (this.num<10) {
+			// 				this.num++; 
+			// 			} else {
+			// 				alert('别点啦，最大啦')
+			// 			}
+						
+			// 		},
+			// 		sub:function(){
+			// 			if (this.num>0) {
+			// 				this.num--;
+			// 			} else {
+			// 				alert('别点啦，最小啦')
+			// 			}
+			// 		}
+			// 	}
+			// })
+		
+		   var vm=new Vue({
+			e1:"#app",
+			data:{
+				cityName:"shanghai",
+				message:"helloworld",
+				dataId:"dfd1"
+			},
+			//状态监听：data数据的变化
+			//值：对象定义方法，方法必须与data的属性名一致
+			watch:{
+				cityName(newName,olaname){
+					console.log(newName,olaname)
+				}
+			},
+
+       //过滤器参数：必须定义一个参数 此参数就是过滤器的数据
+	   //应用场景：对应数据格式化
+
+			filters:{
+				toUppercase(value){
+					return value?value.toUppercase():""
+				},
+				formatId(value){
+					return value? value.charAt(1)+value.indexOf("d"):""
+				}
+			}
+		   })
+		     
+		</script>
+
+           <!-- 提供渲染速度 -->
+		   
+	</body>
+	</html>

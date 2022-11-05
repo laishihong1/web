@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+            perspective: 2200px;
+        }
+      .boxs {
+          position: relative;
+          height: 400px;
+          width: 1000px;
+          margin : 200px auto;  
+          transform-style: preserve-3d;
+          animation: animations 6s infinite linear;
+      }
+
+     @keyframes animations{
+0%{-webkit-transform:rotateX(0) rotateY(0);}
+
+25%{-webkit-transform:rotateX(90deg) rotateY(90deg);}
+
+50%{-webkit-transform:rotateX(180deg) rotateY(180deg);}
+
+75%{-webkit-transform:rotateX(270deg) rotateY(270deg);}
+
+100%{-webkit-transform:rotateX(360deg) rotateY(360deg);}
+
+}
+
+    .box_style{
+         position:absolute;
+         width: 400px;
+         height: 400px;
+         /* background-color: rgb(72, 188, 192); */
+         left: 300px;
+     }
+
+    </style>
+</head>
+<body>
+   <div class="boxs">
+    <!-- 前 -->
+    <div class="box1 box_style" style="transform:translateZ(200px);background: url(../zao_pian/艺术2.png) no-repeat;">1</div>
+    <!-- 后 -->
+    <div class="box2 box_style" style="transform:translateZ(-200px);background: url(../zao_pian/雪花背景.jpg) no-repeat;">2</div>
+    <!-- 左 -->
+    <div class="box3 box_style" style="transform:rotateY(-90deg) translateZ(200px);background: url(../zao_pian/艺术1.png) no-repeat;">3</div>
+    <!-- 右 -->
+    <div class="box4 box_style" style="transform:rotateY(90deg) translateZ(200px);background: url(../zao_pian/艺术4.png) no-repeat;">4</div>
+    <!-- 上 -->
+    <div class="box5 box_style" style="transform:rotateX(90deg) translateZ(200px);background: url(../zao_pian/艺术2.png) no-repeat;">5</div>
+    <!-- 下 -->
+    <div class="box6 box_style" style="transform:rotateX(-90deg) translateZ(200px);background: url(../zao_pian/雪花背景.jpg) no-repeat;">6</div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    <style>
+        .odiv1{
+            width: 80px;
+            height: 80px;
+            background-color: #aaa;
+           
+        }
+        .odiv2{
+            width: 50px;
+            height: 50px;
+            background-color: #ccc;
+            margin: 5px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="count+=Math.random()">点击</button>
+        <p>随机数{{count}}</p>
+
+        <!-- 按键(按键名：代表监听哪个按键)事件修饰符 -->
+        <input type="text"@keyup.enter="sumbit">
+
+        <!-- 事件修饰符 -->
+        <!-- .stop事件修饰符(阻止事件冒泡[默认：事件冒泡]) -->
+
+       
+        <div @click="doParent">
+            <button @click="dothis">事件冒泡</button>
+            <button @click.stop="dothis">阻止事件冒泡</button>
+        </div>
+
+        <!-- 注意：写在子元素上面无效，执行顺序由外部到内部结构执行 -->
+         <!-- capture事件修饰符：事件捕获(执行顺序由外部向内部结构执行) -->
+         <div @click.capture="doParent">
+            <button @click.capture="dothis">事件捕获</button>
+         </div>
+
+    
+        <!-- prevent阻止默认行为 -->
+        <a href="myherf" @click.prevent="hello">阻止默认行为</a>
+        <a href="myherf">默认行为</a>
+
+        <!-- .self事件修饰符(只有DOM元素本身会触发事件)[即使事件冒泡到父元素,父元素也不会触发] -->
+        <div class="odiv1"@click.self='doParent'>a</div>
+        <div class="odiv2"@click.self='dothis'>b</div>
+
+       <!-- once只触发一次事件处理函数 -->
+       <div class="odiv1"@click.once='dothis'>只执行一次</div>
+       <div class="odiv2"@click='dothis'>执行n次</div>
+
+       
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                count:0,
+                myherf:'http://www.baidu.com'
+            },
+            methods:{
+                submit(){
+                    console.log("你好")
+                },
+                doParent(){
+                    console.log("我是父元素的点击事件")
+                },
+                dothis(){
+                    console.log("我是子元素的点击事件")
+                },
+                hello(){
+                    alert("goodNight")
+                }
+            }
+        })
+    </script>
+</body>
+</html>

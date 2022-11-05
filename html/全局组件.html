@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组件</title>
+
+    <!-- 自定义的标签:简单的标签:包含多个标签的复杂标签
+    单页面应用
+    特性:
+    1:组件是构成页面中独立结构单元
+    2:组件主要以页面结构形式存在
+    3:不同组件具有基本交互功能
+    优点:
+    1:减少重复代码编写:提高开发效率
+    2:降低代码耦合程度:使得项目更加维护管理 
+    3:根据业务逻辑实现复杂项目功能
+    分类:
+     全局组件:整个网站的所有页面都可以使用
+     局部组件:只能在定义页面使用
+     重点:[传值]   -->
+
+
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <mycomponent></mycomponent>
+    <mycomponent></mycomponent>
+    <mycomponent></mycomponent>
+    <script>
+        //全局组件
+        Vue.component("mycomponent",{
+            data(){
+                return {
+                    count:0
+                }
+            },
+            template:"<button @click='count++'>被点击了{{count}}次</button>"
+        })
+        var vm=new Vue({
+            el:"#app"
+    
+        })
+    </script>
+</body>
+</html>

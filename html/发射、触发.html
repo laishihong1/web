@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emit 发射/触发</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <parent></parent>
+    </div>
+
+    <template id="child">
+        <div>
+            <button @click="click">send</button>
+            <input type="text" v-model="message">
+        </div>
+    </template>
+    
+
+    <template id="parent">
+        <div>
+            <child @childfn="tansContent"></child>
+            <p>子组件传递的值{{message}}</p>
+        </div>
+    </template>
+
+    <script>
+        Vue.component("parent",{
+            template:"#parent",
+            data(){
+                return {
+                    message:'tom'
+                }
+            },
+            methods:{
+                tansContent(transData){
+                    this.message=transData
+                }
+            }
+
+        })
+
+        Vue.component("child",{
+            template:"#child",
+            data(){
+                return {
+                    message:"子组件的值"
+                }
+            },
+            methods:{
+                click(){
+                    //$emit 专门用于触发自定义事件的执行
+                    //$emit(触发的自定义事件的名称,给自定义事件的事件处理函数传递的值)
+                    this.$emit('childfn',this.message)
+                }
+            }
+        })
+
+        var vm=new Vue({
+            el:"#app"
+        })
+    </script>
+</body>
+</html> 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>***爱学习***</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>点我</div>
+    <button>背景色</button>
+    <script>
+        // 倒计时
+        var div = document.querySelector('div');
+        var time = 10;
+        div.addEventListener('click',function() {
+            var timer = setInterval(function(){
+                if(time == 0){
+                   // 清楚定时器和复原按钮
+                    div.innerHTML = "时间到了";
+                } else {
+                    div.innerHTML = time--;
+                }
+            },1000);
+        })
+        // 背景换色
+        var btn = document.querySelector('button');
+        function suiJi(m, n){
+            return m + parseInt(Math.random() * (n - m + 1)) // 生成mn之间的数包含mn
+        }
+        function yanSe(){
+            var result = "#"
+            for(var i = 0; i < 6; i++){ //颜色的代码
+                result += suiJi(0, 15).toString(16) //生成一个随机颜色编码
+            }
+            return result;
+        }
+        btn.onclick = function(){
+            setInterval(() => {
+                document.body.style.background = yanSe();
+            }, 1000);
+        }
+    </script>
+</body>
+</html> 
