@@ -1,0 +1,82 @@
+.foot {
+    position: relative;
+    margin-top: 2px;
+    border-top: 1px solid rgba(0,0,0,.1);
+    height: 294px;
+    background-color: gainsboro;
+}
+.qi_ye_guide{
+    position: relative;
+    right: 0;
+}
+.qi_ye_guide li {
+    display: inline-block;
+}
+.qi_ye_guide li a:nth-child(2n+1) {
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 2px;
+    color: #000;
+    text-decoration: none;
+}
+
+.qi_ye_guide li:nth-child(2n) {
+    display: inline-block;
+    font-size: 10px;  
+}
+
+.foot .qi_ye_guide  {
+   position: absolute;
+   top:43px;
+   right: 510px;
+   color: gray;
+}
+.foot .qi_ye_guide li a {
+    margin:0px 8px;
+    color: gray;
+}
+
+.zhu_ce {
+    position: absolute;
+    right: 624px;
+    top:87px;
+    color: gray;
+    font-size: 10px;  
+}
+.shi_pin {
+    position: absolute;
+    right: 486px;
+    top:127px;
+    color: gray;
+    font-size: 10px;  
+}
+
+.yao_pin {
+    position: absolute;
+    right: 536px;
+    top:150px;
+    color: gray;
+    font-size: 10px;  
+}
+.foot_er_picture {
+    position: relative;
+    height: 58px;
+    /* background-color: green; */
+    text-decoration: none;
+    height: 58px;
+    top:184px;
+    text-align: center;
+}
+
+.foot_er_picture li {
+    display: inline-block;
+    position: relative;
+    width: 130px;
+    height: 54px;
+    margin: 0px 21px;
+    border-radius: 2px 2px 2px 2px;
+}
+.foot_er_picture li img {
+    width: 130px;
+    height: 54px;
+}

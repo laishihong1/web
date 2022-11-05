@@ -1,0 +1,148 @@
+.content {
+    position: relative;
+    margin-top:25px;
+    margin-bottom :49px;
+    height: 1388px;
+    background-color: #ffffff;
+    box-shadow: -8px 8px 8px #ebeeef;
+}
+.content_header {
+    width: 1120px;
+    height: 75px;
+    border-bottom: 1px solid #eceef2;
+    margin: 0 auto;
+}
+.zhu_ce_geng_huan_botton_left li {
+    position: relative;
+    display: inline-block;
+    background-color: burlywood;
+    width: 132px;
+    height: 47px;
+    top:28px;
+    text-align: center;
+    line-height: 47px;
+    font-size: 12px;
+    background-color: #f5f5f5;
+    border:1px solid #eceef2;
+}
+.zhu_ce_geng_huan_botton_left li:first-child {
+    left: 35px;   
+}
+.zhu_ce_geng_huan_botton_left li:last-child {
+    left: 45px;
+}
+.zhu_ce_geng_huan_botton_left li:hover {
+    cursor: pointer;
+    border-bottom: none;
+    background-color: #ffffff;
+}
+.zhu_ce_geng_huan_botton_right li{
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    left: 939px;
+    top: -28px;
+    color: #646464;
+}
+.zhu_ce_geng_huan_botton_right li a {
+   width: 42px;
+   height: 19px;
+   background-color: #9a9fa6;
+   font-size:12px;
+   text-decoration: none;
+   color: #ffffff;
+   padding:2px;
+   border:1px solid #ffffff;
+}
+
+.Nav {
+    position: relative;
+    margin: 0 auto;
+    width: 950px;
+    height: 240px;
+    background-color: rgb(52, 158, 158);
+    background: url("../zao_pian/背板.png") -170px -190px;
+  }
+  .Nav a {
+      position: absolute;
+      right: 339px;;
+      top: 212px;;
+      color: #1a66b3;
+      font-size:6px;
+      text-decoration: none;
+  }
+  .Nav i {
+      position: absolute;
+      display: block;
+      width: 18px;
+      height: 24px;
+      /* background-color: blueviolet; */
+      background: url("../zao_pian/icon_qy.png") 0px 80px;
+      left: 180px;
+      top: 269px;
+  }
+  .Nav li {
+      position: relative;
+      left: 206px;
+      top: 266px;;
+      margin-bottom: 34px;
+      font-size: 10px;
+      color: #646464;
+  }
+
+  .Nav li:nth-of-type(1) {
+    font-weight: 500;
+    font-size: 14px;
+ }
+ .Nav li:nth-of-type(2) {
+     left:217px;
+ }
+ .Nav li:nth-of-type(2),.Nav li:nth-of-type(3),.Nav li:nth-of-type(4){
+     margin-left: 67px;
+ }
+.Nav li input {
+    width: 309px;
+    height: 29px;
+    margin-left: 10px;
+    border: 1px solid #e6e6e6;
+}
+
+.qi_ye_xin_xi li{
+    position: relative;
+    left:397px;
+    top: 273px;;
+    font-size: 10px;
+    margin-bottom: 47px;
+    color: #646464;
+}
+.qi_ye_xin_xi i {
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 24px;
+    background: url("../zao_pian/icon_qy.png") 0px 50px;
+    left: 305px;
+    top: 588px;
+}
+.qi_ye_xin_xi li:nth-of-type(1) {
+    font-weight: 500;
+    font-size: 14px;
+    left:337px;
+}
+
+.qi_ye_xin_xi li input {
+    margin-left: 10px;
+    width: 310px;
+    height: 29px;
+    border: 1px solid #e6e6e6;
+    text-indent: 1.5em;
+    line-height: 29px;
+    font-size: 12px;
+}
+
+.qi_ye_xin_xi li select {
+    width: 73px;
+    height: 27px;
+    border: 1px solid #e6e6e6;
+    color: #646464;
+}

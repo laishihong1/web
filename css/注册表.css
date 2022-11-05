@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding:0;
+    list-style: none;
+    /* box-sizing: border-box; */
+    outline: none;
+}
+.w {
+    width: 1200px;
+    margin:0 auto; 
+}
+
+i {
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+    font-style: normal;
+    border: 2px solid purple;
+    font-size: 12px;
+    text-align: center;
+}
+li {
+    vertical-align:baseline;
+}
+em {
+    margin-top: 0;
+    width: 29px;
+    height: 20px;
+    font-style: normal;
+    display: inline-block;
+    border: 2px solid purple;
+    font-size: 12px;
+    text-align: center;
+}
+
+.title {
+    font-size:30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.xing_ming {
+    border: 2px solid purple;
+    margin-left: -2px;
+    width: 542px;
+    height: 20px;
+}
+.gong_zuo {
+    border: 2px solid purple;
+    width: 1129px;
+    margin-left: -2px;
+    height: 20px;
+}
+.dian_hua {
+    border: 2px solid purple;
+    width: 336px;
+    height: 20px;
+    margin-left: -2px;
+}
+.tong_xun {
+    border: 2px solid purple;
+    width: 542px;
+    height: 20px;
+    margin-left: -2px;
+}
+.di_zhi {
+    border: 2px solid purple;
+    width: 544px;
+    height: 20px;
+    margin-left: -2px;
+}
+.advince {
+    border: 2px solid purple;
+    width: 544px;
+    height: 24px;
+    margin-left: -2px;
+}
+.hui_yi {
+    border: 2px solid purple;
+    width: 1196px;
+    height: 84px;
+    text-align: center;
+    line-height: 84px;
+    margin-top: 4px;
+}
+.left_table {
+    margin-top: 2px;
+    border: 2px solid purple;
+    width: 200px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+}
+.center_right_table {
+    margin-top: 2px;
+    border: 2px solid purple;
+    width: 489px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+}
+.center_right_choice {
+    margin-top: 2px;
+    width: 489px;
+    height: 20px;
+    text-align: center;
+}
+
+.footer {
+    position: relative;
+    margin-top: 4px;
+    width: 1196px;
+    height: 80px;
+   border: 2px solid purple;
+   text-align: center;
+}
+
+.set {
+    position: relative;
+    margin: 13px 1px 0px 1px ;
+    width: 95px;
+    height: 30px;
+    text-align: center;
+    background-color: turquoise;
+    text-rendering: auto;
+    border: 2px outset purple;
+}
+ul li:last-child a {
+   margin-top: 11px;
+    display: block;
+   font-size: 10px;
+} 

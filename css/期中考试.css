@@ -1,0 +1,126 @@
+
+* {
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+header,section {
+   position: relative;
+   height: 600px;
+   background-color: green;
+}
+.header_guide {
+text-decoration: none;
+position: absolute;
+left: 100px;
+}
+.header_guide li {
+display: inline-block;
+font-size: 16px;
+color: white;
+margin-right: 1.5em;
+}
+.picture {
+position: absolute;
+width: 300px;
+height: 300px;
+background-color: hotpink;
+border-radius: 50%;
+top: 69px;
+left: 588px;
+background: url("../zao_pian/Snipaste_2021-11-04_09-14-52.png") no-repeat;
+background-size: cover;
+transition: all 1s;
+}
+.picture:hover {
+transform: rotate(360deg);
+}
+.jie_shao {
+position: absolute;
+font-size: 32px;
+color: white;
+top: 370px;
+left: 217px;
+}
+.guide_pciture li {
+position: relative;
+display: inline-block;
+width: 370px;
+height: 236px;
+background-color: rgb(1, 128, 1);
+margin: 28px;
+border: 15px solid white;
+}
+.guide_pciture li img {
+position: absolute;
+top: 25px;
+left: 104px;
+}
+.guide_pciture li:hover {
+border-color: green;
+}
+.gun_dong {
+position: relative;
+width: 1260px;
+height: 360px;
+background-color: green;
+top:86px;
+left: 80px;
+overflow: hidden;
+}
+.tu_pian {
+position: absolute;
+width: 2100px;
+height: 360px;
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+animation: move 5s infinite linear;
+}
+.tu_pian li {
+list-style: none;
+float: left;
+width: 420px;
+height: 360px;
+background-color: greenyellow;
+}
+@keyframes move {
+0% {
+ transform: translateX(0);
+}
+100% {
+ transform: translateX(-1260px);
+}
+}
+
+.jie_shaos {
+position: absolute;
+width: 1100px;
+height: 500px;
+background-color: white;
+top:40px;
+left: 200px;
+}
+.jie_shaos ul {
+width: 800px;
+height: 30px;
+margin: 10px auto;
+border-bottom: 8px solid green ;
+}
+
+.jie_shaos ul li {
+text-decoration: none;
+display: inline-block;
+margin-right: 50px;
+}
+p {
+line-height: 45px;
+color:rgb(0, 129, 0) ;
+font-size: 20px;
+text-indent: 2em;
+}
+footer {
+height: 30px;
+background-color: green;
+color: white;
+font-size: 16px;
+
+}
